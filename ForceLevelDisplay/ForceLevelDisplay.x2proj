@@ -7,6 +7,7 @@
     <SteamPublishID>0</SteamPublishID>
     <AssemblyName>ForceLevelDisplay</AssemblyName>
     <RootNamespace>ForceLevelDisplay</RootNamespace>
+	<ProjectGuid>{e7bcb469-dd10-4855-84b3-f5d627c6488a}</ProjectGuid>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Config\" />
