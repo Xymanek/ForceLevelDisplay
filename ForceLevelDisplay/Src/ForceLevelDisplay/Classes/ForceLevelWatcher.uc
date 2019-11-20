@@ -14,6 +14,8 @@ event PostBeginPlay()
 	HQPres = `HQPRES;
 
 	EventManager = `XEVENTMGR;
+	SelfObject = self;
+
 	EventManager.RegisterForEvent(SelfObject, 'UpdateResources', OnUpdateResources);
 }
 
@@ -27,12 +29,14 @@ event Tick (float DeltaTime)
 	SaveCurrentFL();
 }
 
-static function EventListenerReturn OnUpdateResources (Object EventData, Object EventSource, XComGameState GameState, Name Event, Object CallbackData)
+protected function EventListenerReturn OnUpdateResources (Object EventData, Object EventSource, XComGameState GameState, Name Event, Object CallbackData)
 {
 	if (IsPlayerInGeoscape())
 	{
-		HQPres.m_kAvengerHUD.AddResource(strForceLevelHeader, GetCurrentFL());
+		HQPres.m_kAvengerHUD.AddResource(strForceLevelHeader, string(GetCurrentFL()));
 	}
+
+	return ELR_NoInterrupt;
 }
 
 protected function SaveCurrentFL ()
@@ -56,6 +60,8 @@ event Destroyed ()
 	local Object SelfObject;
 
 	EventManager = `XEVENTMGR;
+	SelfObject = self;
+
 	EventManager.UnRegisterFromAllEvents(SelfObject);
 }
 

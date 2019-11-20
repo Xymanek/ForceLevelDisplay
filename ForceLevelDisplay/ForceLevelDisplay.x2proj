@@ -7,7 +7,10 @@
     <SteamPublishID>0</SteamPublishID>
     <AssemblyName>ForceLevelDisplay</AssemblyName>
     <RootNamespace>ForceLevelDisplay</RootNamespace>
-	<ProjectGuid>{e7bcb469-dd10-4855-84b3-f5d627c6488a}</ProjectGuid>
+    <ProjectGuid>{e7bcb469-dd10-4855-84b3-f5d627c6488a}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Config\" />
@@ -24,6 +27,12 @@
     <Content Include="Config\XComEngine.ini" />
     <Content Include="Config\XComGame.ini" />
     <Content Include="Localization\ForceLevelDisplay.int" />
+    <Content Include="Src\ForceLevelDisplay\Classes\ForceLevelWatcher.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ForceLevelDisplay\Classes\UIListener_AvengerHUD.uc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Src\ForceLevelDisplay\Classes\X2DownloadableContentInfo_ForceLevelDisplay.uc" />
   </ItemGroup>
   <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
