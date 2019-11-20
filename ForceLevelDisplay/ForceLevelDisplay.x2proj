@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>fc5da042-61c5-48e5-b284-5f85ba980037</Guid>
+    <Name>ForceLevelDisplay</Name>
+    <Description>Shows the current Force Level (alien progression) in the resource (top-right) bar when in geoscape</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>ForceLevelDisplay</AssemblyName>
+    <RootNamespace>ForceLevelDisplay</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Content\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\ForceLevelDisplay\" />
+    <Folder Include="Src\ForceLevelDisplay\Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Localization\ForceLevelDisplay.int" />
+    <Content Include="Src\ForceLevelDisplay\Classes\X2DownloadableContentInfo_ForceLevelDisplay.uc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>
